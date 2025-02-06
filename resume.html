@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Gabba - Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .section {
+            padding: 50px;
+            background: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ayush Gabba</h1>
+        <p>Computer Science Student | Cloud Computing Enthusiast</p>
+        <nav>
+            <ul>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="education" class="section">
+        <h2>Education</h2>
+        <p><strong>University of Petroleum and Energy Studies</strong></p>
+        <p>Bachelor of Technology - Computer Science (Cloud Computing)</p>
+        <p>August 2022 - Present</p>
+    </section>
+    
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>SAAS Cloud Computing Project</h3>
+            <p>Developed a Leave Planner app using Java, HTML, CSS, MySQL, and JavaScript. Deployed on AWS.</p>
+        </div>
+        <div class="project">
+            <h3>Database Management Project</h3>
+            <p>Created a Grocery Management System using Python, MySQL, HTML, and CSS.</p>
+        </div>
+        <div class="project">
+            <h3>Diabetic Analysis and Prediction System</h3>
+            <p>Built a diabetes prediction system with Java, HTML5, CSS, JavaScript, and AWS.</p>
+        </div>
+    </section>
+    
+    <section id="activities" class="section">
+        <h2>Activities</h2>
+        <p>Volunteered at Aradhya Foundation to support women and children.</p>
+    </section>
+    
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:ayushgabba16@gmail.com">ayushgabba16@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/ayushgabba" target="_blank">linkedin.com/in/ayushgabba</a></p>
+    </section>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('nav ul li a');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
