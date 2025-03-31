@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* Page Fade-in Animation */
+        body {
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Slide-up Animation for Sections */
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px 0;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideUp 1s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .title {
+            font-size: 4.5rem;
+            font-weight: bold;
+        }
+
+        .title2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .highlight {
+            color: pink;
+        }
+
+        .about-text {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .skills-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .skill-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1a1a1a;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            padding: 10px 20px;
+            width: 150px;
+            font-size: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-box img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        /* Hover Effect */
+        .skill-box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
+            border-color: pink;
+        }
+
+        p {
+            text-align: left;
+        }
+
+        .sidebar {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 8px;
+            transition: 0.3s;
+            color: white;
+        }
+        .sidebar-item:hover {
+            background: #00ff99;
+            color: black;
+        }
+        .icon {
+            font-size: 22px;
+        }
+        .sidebar-item span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="title">ABOUT <span class="highlight">ME</span></h1>
+        <p class="about-text">I am a B.Tech Computer Science and Engineering student at UPES Dehradun, specializing in Cloud Computing and Virtualization Technology (CCVT). With a strong foundation in Java, Python, SQL, and web technologies (HTML, CSS, JavaScript), I have developed multiple projects that showcase my ability to build innovative and scalable solutions.
+            <br>
+            <br>
+            I am passionate about leveraging Docker, cloud platforms, and full-stack development to create efficient, scalable, and secure applications. Always eager to learn and explore new technologies, I aim to contribute to impactful projects and collaborate with like-minded professionals.
+            <br>
+            <br>
+            Beyond technical expertise, I thrive in problem-solving, teamwork, and continuous learning. I am always eager to explore emerging technologies and integrate them into practical applications. My goal is to contribute to impactful projects, collaborate with like-minded professionals, and drive innovation in the ever-evolving tech landscape.
+            <br>
+            <br>
+            I am actively seeking opportunities to apply my skills in cloud computing, DevOps, and software development to real-world challenges. Let’s connect and explore how we can work together!</p>
+    </div>
+
+    <div class="container">
+        <h1 class="title">MY <span class="highlight">SKILLS</span></h1>
+        <h1 class="title2">Front-end <span class="highlight">Tools</span></h1>
+        <div class="skills-section">
+            <div class="skill-box"><img src="html.webp" alt="HTML"> HTML</div>
+            <div class="skill-box"><img src="css.jpeg" alt="CSS"> CSS</div>
+            <div class="skill-box"><img src="javascript.png" alt="JavaScript"> JavaScript</div>
+            <div class="skill-box"><img src="Node.js.svg" alt="NodeJS"> NodeJS</div>
+            <div class="skill-box"><img src="reactjs.png" alt="React.js"> React.js</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="title2">Tools & <span class="highlight">Methods</span></h1>
+        <div class="skills-section">
+            <div class="skill-box"><img src="git.png" alt="Git"> Git</div>
+            <div class="skill-box"><img src="github.png" alt="GitHub"> GitHub</div>
+            <div class="skill-box"><img src="docker.png" alt="Docker"> Docker</div>
+            <div class="skill-box"><img src="streamlit.avif" alt="Streamlit"> Streamlit</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="title2">Back<span class="highlight">end</span></h1>
+        <div class="skills-section">
+            <div class="skill-box"><img src="java.png" alt="Java"> Java</div>
+            <div class="skill-box"><img src="mysql.png" alt="MySQL"> MySQL</div>
+            <div class="skill-box"><img src="mongodb.png" alt="MongoDB"> MongoDB</div>
+        </div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-item" onclick="navigateTo('index.html')">
+            <div class="icon">🏠</div>
+            <span>Home</span>
+        </div>
+        <div class="sidebar-item" onclick="navigateTo('about.html')">
+            <div class="icon">👤</div>
+            <span>About</span>
+        </div>
+        <div class="sidebar-item" onclick="navigateTo('projects.html')">
+            <div class="icon">💼</div>
+            <span>Projects</span>
+        </div>
+        <div class="sidebar-item" onclick="navigateTo('contact.html')">
+            <div class="icon">📩</div>
+            <span>Contact</span>
+        </div>
+    </div>
+
+
+    <script>
+        // Function to navigate to pages
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+
+        document.querySelector(".home").addEventListener("click", function() {
+            navigateTo("home.html");
+        });
+
+        document.querySelector(".projects").addEventListener("click", function() {
+            navigateTo("projects.html");
+        });
+
+        document.querySelector(".contact").addEventListener("click", function() {
+            navigateTo("contact.html");
+        });
+        document.querySelector(".about").addEventListener("click", function() {
+            navigateTo("about.html");
+        });
+        
+
+
+
+        // Clock function
+        function updateClock() {
+            const clock = document.getElementById("clock");
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, "0");
+            const minutes = String(now.getMinutes()).padStart(2, "0");
+            const seconds = String(now.getSeconds()).padStart(2, "0");
+            clock.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>

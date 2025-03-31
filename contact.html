@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #000;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Page Heading */
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .highlight {
+            color: #ff66b2;
+        }
+
+        /* Contact Box */
+        .contact-box {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #ff66b2;
+            margin-top: 20px;
+            animation: slideUp 1s ease-in-out;
+        }
+
+        .left, .right {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .left h2, .right h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: #ff66b2;
+        }
+
+        /* Social Buttons */
+        .social-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-buttons a {
+            text-decoration: none;
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+            transition: 0.3s;
+            box-shadow: 0 0 10px #ff66b2;
+        }
+
+        .social-buttons a i {
+            font-size: 1.2rem;
+        }
+
+        .social-buttons a:hover {
+            background: #ff66b2;
+        }
+
+        /* Form */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-box {
+            display: flex;
+            gap: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #ff66b2;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button {
+            background: #ff66b2;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff3385;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-box {
+                flex-direction: column;
+            }
+
+            .input-box {
+                flex-direction: column;
+            }
+
+            .social-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-buttons a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .sidebar {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 8px;
+            transition: 0.3s;
+            color: white;
+        }
+        .sidebar-item:hover {
+            background: #00ff99;
+            color: black;
+        }
+        .icon {
+            font-size: 22px;
+        }
+        .sidebar-item span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>CONTACT <span class="highlight">ME</span></h1>
+    
+    <div class="contact-box">
+        <div class="left">
+            <h2>GET IN TOUCH</h2>
+            <p>Hey! We are looking forward to starting a project with you! Feel free to reach out…</p>
+            
+            <div class="contact-info">
+                <p><i class="fas fa-user"></i> Name: Ayush Gabba</p>
+                <p><i class="fas fa-map-marker-alt"></i> Location: Dehradun ,Uttarakhand</p>
+                <p><i class="fas fa-envelope"></i> Email: Ayushgabba16@gmail.com</p>
+                <p><i class="fas fa-phone"></i> Number: 9625295273</p>
+            </div>
+
+            <!-- Social Media Buttons -->
+            <div class="social-buttons">
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            </div>
+        </div>
+
+        <div class="right">
+            <h2>Send a message</h2>
+            <form>
+                <div class="input-box">
+                    <input type="text" placeholder="Enter your name">
+                    <input type="email" placeholder="Enter your email">
+                </div>
+                <input type="text" placeholder="Subject of Message">
+                <textarea placeholder="Message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-item" onclick="navigateTo('home.html')">
+            <div class="icon">🏠</div>
+            <span>Home</span>
+        </div>
+        <div class="sidebar-item" onclick="navigateTo('about.html')">
+            <div class="icon">👤</div>
+            <span>About</span>
+        </div>
+        <div class="sidebar-item" onclick="navigateTo('projects.html')">
+            <div class="icon">💼</div>
+            <span>Projects</span>
+        </div>
+        <div class="sidebar-item" onclick="navigateTo('contact.html')">
+            <div class="icon">📩</div>
+            <span>Contact</span>
+        </div>
+    </div>
+
+
+    <script>
+        // Function to navigate to pages
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+
+        // Add click event listeners
+        document.querySelector(".home").addEventListener("click", function() {
+            navigateTo("index.html"); // Navigate to Home
+        });
+        document.querySelector(".projects").addEventListener("click", function() {
+            navigateTo("projects.html"); // Navigate to Work
+        });
+
+        document.querySelector(".about").addEventListener("click", function() {
+            navigateTo("about.html"); // Navigate to Contact
+        });
+
+        document.querySelector(".contact").addEventListener("click", function() {
+            navigateTo("contact.html"); // Navigate to Contact
+        });
+    </script>
+</body>
+</html>
+
+</body>
+</html>
