@@ -163,7 +163,7 @@
             <div class="skill-box"><img src="html.webp" alt="HTML"> HTML</div>
             <div class="skill-box"><img src="css.jpeg" alt="CSS"> CSS</div>
             <div class="skill-box"><img src="javascript.png" alt="JavaScript"> JavaScript</div>
-            <div class="skill-box"><img src="Node.js.svg" alt="NodeJS"> NodeJS</div>
+            <div class="skill-box"><img src="nodejs.png" alt="NodeJS"> NodeJS</div>
             <div class="skill-box"><img src="reactjs.png" alt="React.js"> React.js</div>
         </div>
     </div>
@@ -228,21 +228,6 @@
         document.querySelector(".about").addEventListener("click", function() {
             navigateTo("about.html");
         });
-        
-
-
-
-        // Clock function
-        function updateClock() {
-            const clock = document.getElementById("clock");
-            const now = new Date();
-            const hours = String(now.getHours()).padStart(2, "0");
-            const minutes = String(now.getMinutes()).padStart(2, "0");
-            const seconds = String(now.getSeconds()).padStart(2, "0");
-            clock.textContent = `${hours}:${minutes}:${seconds}`;
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
     </script>
 </body>
 </html>
