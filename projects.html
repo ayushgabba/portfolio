@@ -15,7 +15,7 @@
             font-family: Arial, sans-serif;
             text-align: center;
         }
-    
+
         .container {
             padding: 50px;
         }
@@ -30,8 +30,8 @@
 
         .projects {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3-column grid */
-            gap: 10px; /* Reduced space between cards */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
             padding: 20px;
             justify-content: center;
         }
@@ -41,24 +41,31 @@
             padding: 10px;
             border-radius: 15px;
             position: relative;
-            height: 250px; /* Reduced height */
-            width: 350px; /* Reduced width */
+            height: auto;
+            width: 350px;
             margin: auto;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
         }
 
         .project-card img {
             width: 100%;
-            height: 100%;
+            height: 250px;
+            object-fit: cover;
             border-radius: 10px;
             transition: 0.3s;
-            border: 5px solid white; /* Added border */
+            border: 5px solid white;
         }
 
         .project-card:hover img {
             transform: scale(1.05);
+        }
+
+        .project-title {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #ccc;
         }
 
         .sidebar {
@@ -100,56 +107,67 @@
                 <a href="https://github.com/ayushgabba/Docker_project/tree/main/HelloWorld" target="_blank">
                     <img src="hello-world-thumbnail.jpeg" alt="Project Screenshot">
                 </a>
+                <p class="project-title">Hello World Docker</p>
             </div>
             <div class="project-card">
                 <a href="https://github.com/ayushgabba/Docker_project/tree/main/volume-docker" target="_blank">
                     <img src="DOCKER_VOLUME.png" alt="Project Screenshot">
                 </a>
+                <p class="project-title">Docker Volume</p>
             </div>
             <div class="project-card">
                 <a href="https://github.com/ayushgabba/Docker_project/tree/main/fullstack-docker" target="_blank">
                     <img src="FULLSTACKIMAGE.png" alt="Project Screenshot">
                 </a>
+                <p class="project-title">Fullstack App Dockerized</p>
             </div>
             <div class="project-card">
                 <a href="https://github.com/ayushgabba/Docker_project/tree/main/mysql-docker" target="_blank">
                     <img src="MYSQLDOCKERIMAGE.png" alt="Project Screenshot">
                 </a>
+                <p class="project-title">MySQL with Docker</p>
             </div>
             <div class="project-card">
                 <a href="https://dockerproject-5mrq8jlzhptk6beqxhfpq9.streamlit.app/" target="_blank">
                     <img src="streamlit-dockerimage.png" alt="Project Screenshot">
                 </a>
+                <p class="project-title">Streamlit + Docker App</p>
             </div>
             <div class="project-card">
                 <a href="http://13.60.68.24:8501/" target="_blank">
                     <img src="ec2ondocker.png" alt="Project Screenshot">
                 </a>
+                <p class="project-title">App Deployed on EC2</p>
             </div>
             <div class="project-card">
                 <a href="https://github.com/ayushgabba/Docker_project/tree/main/Minikube-and-Kucetl-docker" target="_blank">
                     <img src="KUBERNETESIMAGE.png" alt="Project Screenshot">
                 </a>
+                <p class="project-title">Kubernetes with Minikube</p>
             </div>
             <div class="project-card">
                 <a href="https://github.com/ayushgabba/Docker_project/tree/main/StreamlitModel_Docker" target="_blank">
                     <img src="POSTGRESQLIMAGE.png" alt="Project Screenshot">
                 </a>
+                <p class="project-title">Streamlit + PostgreSQL</p>
             </div>
             <div class="project-card">
                 <a href="https://dockerproject-2iprdzgd5dfgyduenabweq.streamlit.app/" target="_blank">
                     <img src="evidently-ai-streamlit-image.png" alt="Project Screenshot">
                 </a>
+                <p class="project-title">Evidently AI Monitoring</p>
             </div>
             <div class="project-card">
                 <a href="https://github.com/ayushgabba/Docker_project/tree/main/network-docker" target="_blank">
                     <img src="NETWORKINGIMAGE.jpg" alt="Project Screenshot">
                 </a>
+                <p class="project-title">Docker Networking</p>
             </div>
             <div class="project-card">
                 <a href="https://multipageappapp-hpdnudgzeg5itw6puq2xce.streamlit.app/" target="_blank">
                     <img src="multipage_streamlit_app.png" alt="Project Screenshot">
                 </a>
+                <p class="project-title">Multipage Streamlit App</p>
             </div>
         </div>
     </div>
@@ -179,8 +197,5 @@
         }
     </script>
 
-</body>
-</html>
- 
 </body>
 </html>
